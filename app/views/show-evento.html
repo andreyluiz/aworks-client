@@ -1,0 +1,38 @@
+<h2>Exibindo evento</h2>
+<form>
+  <div class="well">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" class="form-control" placeholder="Nome" ng-model="evento.nome" disabled>
+    </div>
+    <div class="form-group">
+      <label for="valor_minimo">Valor Mínimo</label>
+      <div class="input-group">
+        <div class="input-group-addon">R$</div>
+        <input type="text" id="valor_minimo" class="form-control" ui-number-mask placeholder="Valor Mínimo" ng-model="evento.valor_minimo" disabled>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="variacao">Variação</label>
+      <div class="input-group">
+        <div class="input-group-addon">%</div>
+        <input type="text" id="variacao" class="form-control" ui-number-mask placeholder="Variação" ng-model="evento.variacao" disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="data_limite">Data Limite</label>
+      <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="evento.data_limite" disabled>
+    </div>
+
+    <div class="form-group">
+      <label for="data_cadastro">Data de Cadastro</label>
+      <input type="text" class="form-control" datepicker-popup="dd/MM/yyyy" ng-model="evento.data_cadastro" disabled>
+    </div>
+  </div>
+  <div style="display: block;">
+    <a href="#/eventos/{{ evento._id }}/editar" class="btn btn-primary pull-right">Editar</a>
+    <button class="btn btn-danger" ng-click="deletar(evento)">Deletar</button>
+    <a href="#/eventos" class="btn btn-default">Voltar</a>
+  </div>
+</form>
