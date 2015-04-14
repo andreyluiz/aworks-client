@@ -8,17 +8,15 @@
       <th>Variação</th>
       <th>Data de Cadastro</th>
       <th>Data Limite</th>
-      <th></th>
     </tr>
 
-    <tr ng-repeat="evento in eventos">
+    <tr ng-repeat="evento in eventos" style="cursor: pointer;" ng-click="showEvento(evento._id)">
       <td>{{ evento.evento_id }}</td>
       <td>{{ evento.nome }}</td>
       <td>{{ evento.valor_minimo | currency }}</td>
       <td>{{ evento.variacao | currency }}</td>
       <td>{{ evento.data_cadastro | date:'dd/MM/yyyy' }}</td>
       <td>{{ evento.data_limite | date:'dd/MM/yyyy' }}</td>
-      <td><a href="#/eventos/{{ evento._id }}">Ver</a></td>
     </tr>
 
   </table>

@@ -3,6 +3,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+[ng-cloak] {
+  display: none !important;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -93,8 +97,4 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}
-
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
 }

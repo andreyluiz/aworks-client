@@ -14,4 +14,8 @@ angular.module('aworksClientApp')
       .success(function(eventos) {
         $scope.eventos = eventos;
       });
+
+    $scope.showEvento = function(id) {
+      $location.path('/eventos/' + id);
+    };
   });
